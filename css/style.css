@@ -141,7 +141,7 @@ nav {
 }
 
 .down-arrow:hover svg path {
-    fill: #778fdd;
+    fill: #6a87e8;
     -webkit-transition: fill 800ms;
     transition: fill 800ms;
 }
@@ -182,11 +182,11 @@ nav {
 }*/
 
 .bg-pink {
-    background-color: #778fdd;
+    background-color: #6a87e8;
 }
 
 .badge-info {
-    background-color: #778fdd !important;
+    background-color: #cdaf28 !important;
 }
 
 @media (min-width: 768px) {
