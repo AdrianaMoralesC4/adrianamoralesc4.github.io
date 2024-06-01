@@ -11,6 +11,9 @@ a {
 
 /*Para definir una clase se pone el punto (.)*/
 .caja-enlace {
+    display: block;
+    width: 200px;
     border: 1px solid lightblue;
-
+    padding: 5px;
+    margin: 5px;
 }
