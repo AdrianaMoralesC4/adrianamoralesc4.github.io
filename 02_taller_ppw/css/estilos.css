@@ -1,0 +1,16 @@
+h1 {
+    font-size: 30px;
+    font-style: italic;
+    text-shadow: 8px 3px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+a {
+
+}
+
+/*Para definir una clase se pone el punto (.)*/
+.caja-enlace {
+    border: 1px solid lightblue;
+
+}
