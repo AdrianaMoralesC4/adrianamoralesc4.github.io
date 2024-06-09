@@ -1,12 +1,25 @@
 h1 {
     font-size: 30px;
     font-style: italic;
-    text-shadow: 8px 3px 5px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    text-shadow: 8px 3px 5px rgba(0, 0, 0, 0.5);    /*/text-align: center;*/
 }
 
 a {
 
+}
+
+li.enlace{
+    display: inline-block;
+}
+
+.container-imagen{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.imagen{
+    width: 220px;
 }
 
 /*Para definir una clase se pone el punto (.)*/
@@ -16,4 +29,15 @@ a {
     border: 1px solid lightblue;
     padding: 5px;
     margin: 5px;
+    /*box-shadow: 8px 3px 5px rgba(0, 0, 0, 0.5); Para agregar sombre a la caja*/ 
+}
+
+.container-menu{
+    display: flex;
+    flex-direction: row; /*fila*/
+    /*flex-direction: row-reverse; /*fila inversa*/
+    /*flex-direction: column; /*columna*/
+    /*flex-direction: column-reverse; /*columna inversa*/
+    justify-content: center;
+    background-color: black; /*color del contenedor*/
 }
