@@ -1,10 +1,10 @@
 p{
-    font-size: 18px;
+    font-size: 24px;
     background-color: lightskyblue;
 }
 
-.posicion-relativo {
-    position: relative;
+.posicion-fixed {
+    position: fixed;
     top: 20px;
     left: 20px;
     background-color: blueviolet;
