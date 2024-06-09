@@ -39,5 +39,11 @@ li.enlace{
     /*flex-direction: column; /*columna*/
     /*flex-direction: column-reverse; /*columna inversa*/
     justify-content: center;
-    background-color: black; /*color del contenedor*/
+    background-color: rgb(0, 0, 0); /*color del contenedor*/
+}
+
+.container-footer{
+    color: aliceblue;
+    font-size: 20px;
+    background-color: black;
 }
