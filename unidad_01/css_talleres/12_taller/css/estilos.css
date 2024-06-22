@@ -4,7 +4,7 @@
 
 .container {
     display: grid;
-    grid-template: 150px 50px 1fr 10px 50px / 1fr;
+    grid-template: 150px 50px 1fr 50px / 1fr;
     grid-template-areas: "header" "left" "content" "footer" ;
     grid-gap: 5px;
     height: 100vh;
@@ -32,7 +32,7 @@
 .content{
     grid-area: content;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     background-color: lightblue;
         
@@ -65,27 +65,21 @@
 
 .item2{
     background-color: gray;
-    
     height: 30px;
     width: 75px;
     padding: 21px;
-    font-size: 10px;
-    color:black;
-    font-weight: bolder;
-    text-align: center;
-    align-self: flex-end;
+    /*font-size: 10px;*/
+    /*color:black;*/
+    /*font-weight: bolder;*/
+    /*text-align: center;*/
+    /*align-self: flex-end;*/
 }
 
 .item3{
     background-color: blue;
-    
     height: 30px;
     width: 75px;
     padding: 21px;
-    font-size: 10px;
-    color:black;
-    font-weight: bolder;
-    text-align: center;
 }
 
 .item4{
