@@ -38,6 +38,12 @@
         
 }
 
+.fila{
+    display: flex;
+    justify-content: center;
+    flex-direction: row; 
+}
+
 .footer{
     grid-area: footer;
     background-color: lightblue;
@@ -57,5 +63,41 @@
     align-self: center;
 }
 
+.item2{
+    background-color: gray;
+    
+    height: 30px;
+    width: 75px;
+    padding: 21px;
+    font-size: 10px;
+    color:black;
+    font-weight: bolder;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.item3{
+    background-color: blue;
+    
+    height: 30px;
+    width: 75px;
+    padding: 21px;
+    font-size: 10px;
+    color:black;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.item4{
+    background-color: pink;
+    
+    height: 30px;
+    width: 75px;
+    padding: 21px;
+    font-size: 10px;
+    color:black;
+    font-weight: bolder;
+    text-align: center;
+}
 
 
