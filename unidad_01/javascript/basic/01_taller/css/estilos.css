@@ -23,14 +23,19 @@
 
 .left{
     grid-area: left;
+    display: flex;
+    flex-direction: column;
     
 }
 
 .content{
     grid-area: content;
+    grid-gap: 5px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    
         
 }
 
@@ -48,7 +53,10 @@
     color: aliceblue;
     font-weight: bolder;
     text-align: center;
-    align-self: center;
     
 }
 
+.item-button{
+    font-size: 20px;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
+}
