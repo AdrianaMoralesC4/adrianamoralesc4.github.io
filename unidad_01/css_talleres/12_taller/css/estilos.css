@@ -4,26 +4,27 @@
 
 .container {
     display: grid;
-    grid-template: 150px 1fr 50px / 200px 1fr;
-    grid-template-areas: "header header" "left" "area" "footer" ;
+    grid-template: 150px 50px 1fr 10px 50px / 1fr;
+    grid-template-areas: "header" "left" "content" "footer" ;
     grid-gap: 5px;
     height: 100vh;
 }
 
 .item {
-    background-color: dodgerblue;
+    background-color: lightblue;
     padding: 10px;
     border: 1px solid lightgray;
 }
 
 .header{
     grid-area: header;
+    background-color: lightblue;
 
 }
 
 .left{
     grid-area: left;
-    background-color: bisque;
+    background-color: lightblue;
     
     
 }
@@ -33,29 +34,28 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    background-color: blue;
+    background-color: lightblue;
         
 }
 
 .footer{
     grid-area: footer;
+    background-color: lightblue;
     
 }
 
-.item1, .item2, .item3, .item4, .item5{
-    border: 1px solid black;
+.item1{
+    /*order: 1px solid black;*/
+    background-color: yellow;
     height: fit-content;
     width: fit-content;
-    padding: 20px;    
-    font-size: 20px;
-    color: aliceblue;
-    font-weight: bolder;
-    text-align: center;
+    padding: 175px;    
+    /*font-size: 20px;*/
+    /*color: yellow;*/
+    /*font-weight: bolder;
+    text-align: center;*/
     align-self: center;
-    
 }
 
-.area{
-    grid-area: area;
-    grid-template: 1fr / 10px 10px 10px;
-}
+
+
