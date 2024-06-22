@@ -11,3 +11,10 @@ function cargar_elemento(){
 
     content.appendChild(div)
 }
+
+function eliminar_elemento() {
+    var content = document.getElementById("content")
+    content.removeChild(content.lastElementChild)
+    contador--
+
+}

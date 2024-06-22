@@ -25,6 +25,7 @@
     grid-area: left;
     display: flex;
     flex-direction: column;
+    grid-gap: 5px;
     
 }
 
@@ -45,7 +46,7 @@
 }
 
 .item-box {
-    border: 3px solid black;
+    border: 2px solid black;
     height: fit-content;
     width: fit-content;
     padding: 20px;    
