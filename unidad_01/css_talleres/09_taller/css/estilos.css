@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template: 150px 1fr 50px / 200px 1fr;
+    grid-gap: 10px;
+    height: 100vh;
+}
+
+.item {
+    border: 1px solid black;
+}
