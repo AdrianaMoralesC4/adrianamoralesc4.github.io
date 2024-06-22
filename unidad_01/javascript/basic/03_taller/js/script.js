@@ -1,7 +1,7 @@
 var contador = 1
 
 function cargar_elemento(){
-    var content = document.getElementById("content")
+    /*var content = document.getElementById("content")*/
     var texto = document.getElementById("texto")
 
     var div = document.createElement("div")
