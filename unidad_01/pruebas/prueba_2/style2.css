@@ -1,0 +1,36 @@
+.container{
+    display: grid;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px;
+    /* grid-auto-columns: 100px; para los item implicito se utiliza este codigo para poner la medida adecuada */
+    /* grid-auto-flow: column; con este comando cualquier item implicito sera tratado de la forma en la que se le pongo ya sea como columna o fila */
+}
+
+.item-1{
+    /*grid-row-start:1 ;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;*/ /*Opcion 1, pero es muy larga*/
+    grid-row: 1 / 3;
+    grid-column: 1 / 7;
+}
+
+.item-2{
+    /*grid-row: 1 / 3;*/
+    /*grid-row: span 2;  /*otra manera mas de expandir los item, sirve por bloque
+    /*grid-column: 5 / 7;*/
+    /*rid-column: span 2;*/
+    /*ejercicio- que item 2 toque item 1 e item3 :D*/
+    grid-area: 2 / 4 / 4 / 6;
+    z-index: 1; /* para hacer mas adeltante el item */
+}
+
+.item-3{
+    /*grid-area: row-start column-start row-end column-end;*/
+    /*grid-area: 3 / 1 / 7 / 7; /* puede ser de esta forma*/
+    grid-area: 3 / 1 / -1 / -1; /*como tambien esta se puede utilizar negativos*/
+}
+
+.item-4{ /*este item llega a ser un item implicito porqu sus medidas no son como los otros del grid*/
+   grid-area: auto;
+}
