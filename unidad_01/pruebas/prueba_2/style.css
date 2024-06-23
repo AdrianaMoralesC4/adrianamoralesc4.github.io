@@ -21,7 +21,8 @@
   }
   
   .container {
-    width: 80%;
+    width: fit-content;
+    /* width: 600px; */
     margin: 0 auto;
     border: 10px solid var(--clr-dark);
   }
