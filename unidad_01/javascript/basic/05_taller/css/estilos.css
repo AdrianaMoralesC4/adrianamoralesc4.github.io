@@ -91,7 +91,7 @@
 
 #imagen02{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     top: 210px;
     width: 250px;
     height: 250px;
