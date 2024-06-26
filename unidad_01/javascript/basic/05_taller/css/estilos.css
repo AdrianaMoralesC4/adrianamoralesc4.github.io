@@ -80,3 +80,19 @@
     background-color: lightskyblue;
     z-index: 1;
 }
+
+#imagen01{
+    position: absolute;
+    z-index: 2;
+    top: 210px;
+    width: 250px;
+    height: 250px;
+}
+
+#imagen02{
+    position: absolute;
+    z-index: 2;
+    top: 210px;
+    width: 250px;
+    height: 250px;
+}
