@@ -4,7 +4,7 @@
 
 .container {
     display: grid;
-    grid-template: 150px 50px 1fr 50px / 1fr;
+    grid-template: 80px 40px 1fr 40px / 1fr;
     grid-template-areas: "header" "left" "content" "footer" ;
     grid-gap: 5px;
     height: 100vh;
@@ -17,6 +17,7 @@
 }
 
 .header{
+    border: 1px solid darkblue;
     grid-area: header;
     background-color: lightskyblue;
     text-align: center;
@@ -25,6 +26,7 @@
 }
 
 .left{
+    border: 1px solid darkblue;
     grid-area: left;
     background-color: lightskyblue;
     text-align: center;
@@ -34,16 +36,19 @@
 }
 
 .content{
+    border: 1px solid darkblue;
     grid-area: content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: lightskyblue;
     grid-gap: 2px;
-    /*align-items: center;        */
+    /* align-items: center; */
+    color: beige;    
 }
 
 .fila{
+    
     display: flex;
     justify-content: center;
     flex-direction: row; 
@@ -52,6 +57,7 @@
 }
 
 .footer{
+    border: 1px solid darkblue;
     grid-area: footer;
     background-color: lightskyblue;
     text-align: center;
@@ -59,7 +65,7 @@
     
 }
 
-/* .item1{
+.item1{
     border: 1px solid darkblue;
     /*order: 1px solid black;*/
     background-color: yellow;
@@ -70,8 +76,8 @@
     /*color: yellow;*/
     /*font-weight: bolder;
     text-align: center;*/
-    /*align-self: center;*/
-} */
+    align-self: center;
+}
 
 .item2{
     border: 1px solid darkblue;
