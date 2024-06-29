@@ -6,6 +6,7 @@ function mover(){
     clearInterval(id)
     id = setInterval(frame, 5)
     // El setInterval es para que se repita varias veces
+    // Entre menos el valor de (frame, #) mas rapido
 
 }
 
