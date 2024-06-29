@@ -1,15 +1,12 @@
-* {
-    margin: 0px;
+.container{
+    position: relative;
 }
 
 #cajita{
-    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: auto;
-    padding: 10px;
-    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
-    background-color: lightskyblue;
+    background-color: chartreuse;
 }
 
