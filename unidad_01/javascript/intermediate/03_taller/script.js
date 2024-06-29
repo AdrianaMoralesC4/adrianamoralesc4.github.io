@@ -2,7 +2,7 @@
 let mi_carro = {
     marca: 'Mazda',
     modelo: 'MZX-2000',
-    anio: 2024
+    anio: 2024,
 
     detalle_auto: function(){
         // literal patterns -- ${this.marca}
