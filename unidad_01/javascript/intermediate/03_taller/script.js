@@ -10,10 +10,9 @@ let mi_carro = {
     }
 }
 
-console.log(mi_carro){
-    mi_carro.anio = 2025
-    console.log(mi_carro.detalle_auto())
-}
+console.log(mi_carro)
+mi_carro.anio = 2025
+console.log(mi_carro.detalle_auto())
 
 // CREACION DE UN OBJETO DE MANERA DINAMICA
 function Carro(marca, modelo, anio){
