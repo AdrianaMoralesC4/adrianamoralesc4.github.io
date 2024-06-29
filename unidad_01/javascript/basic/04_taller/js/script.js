@@ -1,28 +1,12 @@
-var div_cajita = document.getElementById("cajita")
-var es_presionado = false
-var offset = [0,0]
+function seleccionar_opcion(opcion){
+    var opcion_1 = document.getElementById("opcion_01")
+    var opcion_2 = document.getElementById("opcion_02")
 
-div_cajita.addEventListener("mousedown", function(valor){
-    es_presionado = true
-
-    offset = [ 
-        div_cajita.offsetLeft - valor.clientX,
-        div_cajita.offsetTop - valor.clientY
-    ]
-
-}, true)
-
-div_cajita.addEventListener("mouseup", function(valor) {
-    es_presionado = false
-}, true)
-
-div_cajita.addEventListener("mousemove", function(valor) {
-    valor.preventDefault()
-
-    if (es_presionado){
-        div_cajita.style.left = (valor.clientX + offset[0]) + "px"
-        div_cajita.style.top = (valor.clientY + offset[1]) + "px"
+    if (opcion == 1) {
+        opcion_1.style.zIndex = 2
+        opcion_2.style.zIndex = 1
+    } else if (opcion == 2) {
+        opcion_1.style.zIndex = 1
+        opcion_2.style.zIndex = 2
     }
-}, true)
-
-    
+}
