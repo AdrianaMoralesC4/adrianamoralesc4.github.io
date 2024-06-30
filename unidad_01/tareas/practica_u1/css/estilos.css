@@ -1,9 +1,17 @@
+h1{
+    font-style: oblique;
+
+}
+
 .container-imagen{
     display: flex;
+    justify-content: right;
+    margin: 0px;
     justify-content: center;
-    margin: 15px;
 }
 
 .imagen{
-    width: 220px;
+    border-radius: 50%;
+    height: 280px;
+    width: 270px;
 }
