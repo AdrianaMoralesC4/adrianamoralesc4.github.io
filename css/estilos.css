@@ -2,24 +2,26 @@
 
 h1 {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-style: italic;
     text-shadow: 8px 3px 5px rgba(0, 0, 0, 0.5);
+    margin: 1vh;
 }
 
 h2{
-    font-size: 29px;
-
+    font-size: 25px;
+    margin: 1;
 }
 
 header{
     font-style: italic;
-    font-size: x-large;
+    font-size: large;
     font-weight: 600;
+    margin: 1vh;
 }
 
 li{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 li.enlace{
@@ -32,7 +34,7 @@ li.enlace{
 
 
 p{
-    font-size: 24px;
+    font-size: 20px;
     text-align: justify;
 }
 
@@ -44,7 +46,7 @@ p{
 
 .imagen{
     border-radius: 50%;
-    width: 450px;
+    width: 350px;
 }
 
 .caja-enlace {
@@ -52,12 +54,12 @@ p{
     display: block;
     width: 300px;
     border: 1px solid black;
-    padding: 7px;
-    margin: 7px;
+    padding: 5px;
+    margin: 5px;
 }
 
 .container-menu{
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
