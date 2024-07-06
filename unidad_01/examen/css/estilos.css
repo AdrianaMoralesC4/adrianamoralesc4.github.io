@@ -1,0 +1,50 @@
+*{
+    background-color: antiquewhite;
+}
+
+p{
+    font-size: 17px;
+}
+
+header{
+    text-align: center;
+    font-style: italic;
+    
+}
+
+.container{
+    /* display: flex; */
+    width: 100vh;
+    
+
+}
+
+.container .recetas{
+    width: 190vh;
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    /* justify-content: center; */
+    text-align: justify;
+    font-size: 17px;
+}
+
+.item-button{
+    font-size: 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background-color: aliceblue;
+    font-weight: bold;
+    padding: 12px;
+
+    position: absolute;
+    top: 160px;
+    left: 230px;
+    bottom: 520px;
+
+}
+
+input{
+    font-size: 15px;
+    background-color: aliceblue;
+}
