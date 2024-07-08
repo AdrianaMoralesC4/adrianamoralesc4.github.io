@@ -1,0 +1,46 @@
+.header{
+    grid-gap: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    margin: 20px;
+    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-button{
+    left: 60px;
+    font-size: 20px;
+    font-style: oblique;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
+}
+
+.box-imagen{
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    height: 300px;
+    font-weight: bold;
+    text-align: center; 
+}
+
+#box-imagen{
+    border: 2px solid #d88f2f;
+    background-color: #e49836;
+}
+
+#imagen{
+    display: none;
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    width: 300px;
+    height: 300px;
+}
