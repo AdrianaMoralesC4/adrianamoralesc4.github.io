@@ -2,8 +2,8 @@ const express = require('express') //Se necesita el paquete express
 
 var app = express()
 
-app.use('/', function(res, res){
-    res.setEncoding('HOLA MUNDO!!!')
+app.use('/', function(req, res){
+    res.send('HOLA MUNDO!!!')
 })
 
 let puerto = 3000
