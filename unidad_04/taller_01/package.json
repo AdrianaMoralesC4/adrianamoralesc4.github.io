@@ -9,6 +9,7 @@
   "license": "GPL-3.0",
   "description": "",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongoose": "^8.5.3"
   }
 }

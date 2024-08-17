@@ -46,6 +46,7 @@
     "mongodb": "^6.8.0",
     "ms": "^2.0.0",
     "negotiator": "^0.6.3",
+    "nodemon": "^3.1.4",
     "object-inspect": "^1.13.2",
     "on-finished": "^2.4.1",
     "parseurl": "^1.3.3",
@@ -74,5 +75,6 @@
   },
   "author": "Adriana Morales",
   "license": "GPL-3.0",
+  "devDependencies": {},
   "description": ""
 }
