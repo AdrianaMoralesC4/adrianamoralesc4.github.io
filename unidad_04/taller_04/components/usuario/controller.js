@@ -1,15 +1,23 @@
 const storage = require('./storage')
 
-function insertar_usuario(data){
+function insertar_usuario( dato ) {
     return Promise( (resolve, reject) => {
-        resolve(storage.insertar())
-    })
+        if (!dato) {
+            reject( 'No existen datos' )
+        } else {
+            resolve( storage.insertar( dato ) )
+        }
+    } )
 }
 
-function obtener_usuario(data){
+function obtener_usuario( dato ) {
     return Promise( (resolve, reject) => {
-        resolve(storage.obtener())
-    })
+        if (!dato) {
+            reject( 'No existen datos' )
+        } else {
+            resolve( storage.obtener( dato ) )
+        }
+    } )
 }
 
 module.exports = {

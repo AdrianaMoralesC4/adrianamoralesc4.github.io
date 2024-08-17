@@ -1,22 +1,23 @@
 const express = require('express')
 
 const controller = require('./controller')
+const response = require('../../network/response')
 
-const router = express.Router()
+const routes = express.Router()
 
-router.post('/',function(req, res){
-    controller.insertar_usuario(req.body)
-        .then((data) => {})
-        .catch( (error) => {})
+routes.post('/', function(req, res) {
+    controller.insertar_usuario( req.body )
+        .then( (data) => response.success(req, res, data, 201) )
+        .catch( (error) => response.error(req, res, error, 400) )
 })
 
-router.get('/', function(req, res){
-    controller.obtener_usuario(req.body)
-        .then((data) => {})
-        .catch( (error) => {})
+routes.get('/', function(req, res) {
+    controller.obtener_usuario( req.body )
+        .then( (data) => response.success(req, res, data, 201) )
+        .catch( (error) => response.error(req, res, error, 400) )
 })
 
-module.exports = router
+module.exports = routes
 
 // router.get('/', function(req, res){
 //     return new Promise( (resolve, reject) => {
