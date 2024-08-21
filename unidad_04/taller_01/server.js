@@ -3,7 +3,7 @@ const express = require('express') //Se necesita el paquete express
 var app = express()
 
 app.use('/', function(req, res){
-    res.send('HOLA MUNDO!!!')
+    res.send('HOLA MUNDOO!!!')
 })
 
 let puerto = 3000
