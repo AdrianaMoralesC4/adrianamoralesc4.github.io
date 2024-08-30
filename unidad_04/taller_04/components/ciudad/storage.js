@@ -28,6 +28,13 @@ async function obtener_ciudad(dato) {
         return ciudades
 }
 
+async function actualizar_ciudad(dato) {
+    const ciudad = await model.findOne({ciudad:dato.ciudad})
+    ciudad.nombre = dato.nombre
+    
+
+}
+
 module.exports = {
     insertar:insertar_ciudad,
     obtener:obtener_ciudad
