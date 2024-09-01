@@ -13,6 +13,15 @@ db( config.DB_URL )
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use('/css', express.static(path.resolve(__dirname, 'assets/css')));
+
+app.get('/add_user', (req, res) =>{
+    res.render('add_user')
+})
+
+app.get('/update_user', (req, res) =>{
+    res.render('update_user')
+})
 
 app.use( body_parser.json() )
 app.use( body_parser.urlencoded({extended:false}) )

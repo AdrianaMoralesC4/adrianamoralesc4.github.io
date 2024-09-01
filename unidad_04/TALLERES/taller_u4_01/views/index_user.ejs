@@ -1,5 +1,33 @@
 <%- include('layout/header')%>
 
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex-justify-between">
+                <a href="add_user.ejs" class="border-shadow">
+                    <span class="text-gradient">Nuevo Usuario<i class="fas fa-user"></i></span>
+                </a>
+            </div>
 
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Clave</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Edición</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('layout/show')%>
+                    </tbody>
+                </table>
+            </form>
+        </div>        
+    </main>
+    <!-- /Main Site -->
 
 <%- include('layout/footer')%>
