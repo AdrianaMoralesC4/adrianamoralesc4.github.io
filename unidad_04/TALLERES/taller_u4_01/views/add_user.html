@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD APLICACION</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+</head>
+<body>
+
+    <!-- Header -->
+     <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">CRUD Usuario</a>
+                </div>
+            </div>
+        </nav>
+     </header>
+    <!-- /Header -->
+    
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex-justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fas fa-angle-double-left"></i>Todos los usuarios</a>
+                </div>
+            </div>
+
+            <div class="form-little text-center">
+                <h2 class="text-dark">Nuevo Usuario</h2>
+                <span class="text-light">Registrate a continuacion...</span>
+            </div>
+
+            <form method="POST" id="update_user">
+                <div class="new_user">
+                    <div class="form-group">
+                        <label for="usuario" class="text-light">Usuario</label>
+                        <input type="hidden" name="id" value="">
+                        <input type="text" name="usuario" value="" placeholder="amorales">
+                    </div>
+                    <div class="form-group">
+                        <label for="clave" class="text-light">Clave</label>
+                        <input type="text" name="clave" value="" placeholder="12345">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre" class="text-light">Nombre</label>
+                        <input type="text" name="nombre" value="" placeholder="Adriana">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido" class="text-light">Apellido</label>
+                        <input type="text" name="apellido" value="" placeholder="Morales">
+                    </div>
+                    <div class="form-group">
+                        <label for="fechnaci" class="text-light">Fecha de Nacimiento</label>
+                        <input type="text" name="fechnaci" value="" placeholder="2003-06-01">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Guardar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
