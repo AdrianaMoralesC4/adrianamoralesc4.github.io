@@ -13,7 +13,6 @@ async function obtenerFacturas( filtroFacturas ) {
 
 async function agregarFactura( factura ) {
     const cliente = await pool.connect() ;
-
     try {
         await cliente.query('BEGIN')
         const factura_registrar = 'INSERT INTO factura(fecha_emision, valor_total, ref_empleado, ref_cliente) VALUES($1, $2, $3, $4)'
@@ -27,7 +26,6 @@ async function agregarFactura( factura ) {
             const detalle_insertar = 'INSERT INTO factura_detalle VALUES()'
             const res2 = await cliente.query(detalle_insertar, [factura.codigo])                
         }
-
         await cliente.query('COMMIT')
     } catch(error) {
         await cliente.query('ROLLBACK')
