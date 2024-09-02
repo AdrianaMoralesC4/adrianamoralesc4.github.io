@@ -5,7 +5,7 @@ async function obtenerCiudades( filtroCiudad ) {
 
     if (filtroCiudad) {
         resultado = await pool.query(
-          'SELECT * FROM ciudad WHERE nombre ILIKE $1',  // Usar ILIKE para búsquedas insensibles a mayúsculas/minúsculas
+          'SELECT * FROM ciudad WHERE id_ciudad ILIKE $1',  // Usar ILIKE para búsquedas insensibles a mayúsculas/minúsculas
         ['%' + filtroCiudad + '%']
         );
     } else {
