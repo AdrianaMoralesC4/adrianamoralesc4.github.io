@@ -1,4 +1,3 @@
-const { actualizar_usuario } = require('../usuario/controller')
 const storage = require('./storage')
 
 function insertar_ciudad( dato ) {
