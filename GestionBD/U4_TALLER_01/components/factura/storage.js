@@ -15,8 +15,8 @@ async function obtener_factura(dato) {
     }
 
     const data = await model.find( mi_filtro )
-    .populate("empleado")
-    .populate("cliente")
+    // .populate("empleado","_id")
+    // .populate("cliente")
     .exec()
 
     let codigos = []
@@ -28,9 +28,9 @@ async function obtener_factura(dato) {
             valor_iva: objeto.valor_iva,
             valor_total: objeto.valor_total,
             empleado_id: objeto.empleado._id,
-            empleado_nombre: objeto.empleado.nombre,
+            // empleado_nombre: objeto.empleado_nombre,
             cliente_id: objeto.cliente._id,
-            cliente_nombre: objeto.cliente.nombre,
+            // cliente_nombre: objeto.cliente.nombre,
             detalle:[
                 objeto.detalle
             ]
