@@ -11,6 +11,14 @@ const req_int = {
     required: true
 }
 
+const detalle_schema = new schema({
+    producto: {
+        type: schema.ObjectId,
+        ref: 'Producto',
+        required: true
+    }
+})
+
 const factura_schema = new schema({
     codigo: req_string,
     fecha_emision: Date,
@@ -28,11 +36,7 @@ const factura_schema = new schema({
         ref: 'Cliente',
         required: true
     },
-    detalle:{
-        type: schema.ObjectId,
-        ref: 'Producto',
-        required: true
-    }
+    detalle: [detalle_schema]
 },{timestamps: { createdAt: 'fecha_emision'}}
 )
 
