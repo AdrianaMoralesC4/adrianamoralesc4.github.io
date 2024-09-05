@@ -16,8 +16,10 @@ const detalle_schema = new schema({
         type: schema.ObjectId,
         ref: 'Producto',
         required: true
-    }
-})
+    },
+    cantidad: req_int,
+    valor_x_cantidad: req_int
+}, { _id: false })
 
 const factura_schema = new schema({
     codigo: req_string,

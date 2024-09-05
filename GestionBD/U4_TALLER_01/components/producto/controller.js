@@ -2,7 +2,7 @@ const storage = require('./storage')
 
 function insertar_producto( dato ) {
     return new Promise( (resolve, reject) => {
-        if (!dato.nombre ) {
+        if (!dato.nombre || !dato.valor ) {
             reject( 'Los datos se encuentran incompletos.' )
         } else {
             resolve( storage.insertar( dato ) )
