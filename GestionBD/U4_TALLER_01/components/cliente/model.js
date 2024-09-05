@@ -10,10 +10,11 @@ const cedula_schema = new schema({
     cedula: req_string,
     nombre: req_string,
     apellido: req_string,
-    docimilio: req_string,
+    domicilio: req_string,
     ciudad:{
         type: schema.ObjectId,
-        ref: 'Ciudad'
+        ref: 'Ciudad',
+        required: true
     }
 })
 

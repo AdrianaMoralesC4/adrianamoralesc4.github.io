@@ -28,7 +28,7 @@ async function obtener_empleado(dato) {
 // }
 
 async function eliminar_empleado(dato) {
-    const resultado = await model.deleteOne( {usuario: dato.usuario} )
+    const resultado = await model.deleteOne( {cedula: dato.cedula} )
     return resultado
 }
 

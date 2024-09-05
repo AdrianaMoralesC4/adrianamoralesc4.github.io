@@ -11,7 +11,7 @@ const ciudad_schema = new schema({
     pais: {
         type: schema.ObjectId,
         ref: 'Pais',
-        // required:true
+        required:true
     }
     // fecha_creacion: Date,
     // fecha_actualizacion: Date

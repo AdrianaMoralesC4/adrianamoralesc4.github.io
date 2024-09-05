@@ -2,7 +2,7 @@ const storage = require('./storage')
 
 function insertar_cliente( dato ) {
     return new Promise( (resolve, reject) => {
-        if (!dato.cedula || !dato.nombre || !dato.apellido || !dato.usuario || !dato.clave) {
+        if (!dato.cedula || !dato.nombre || !dato.apellido || !dato.domicilio || !dato.ciudad) {
             reject( 'Los datos se encuentran incompletos.' )
         } else {
             resolve( storage.insertar( dato ) )
