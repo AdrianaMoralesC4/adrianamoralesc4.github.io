@@ -6,15 +6,6 @@ async function insertar_cliente(dato) {
 }
 
 async function obtener_cliente(dato) {
-    // let mi_filtro = {}
-    
-    // if (dato.cedula != null) {
-    //     mi_filtro = { cedula: dato.cedula }
-    // }
-
-    // const resultado = await model.find( mi_filtro )
-    // return resultado
-
     let mi_filtro = {}
     
     if (dato.cedula != null) {
