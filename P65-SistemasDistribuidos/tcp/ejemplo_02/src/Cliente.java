@@ -7,6 +7,8 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
+import javax.swing.JFrame;
+
 public class Cliente {
 
     private String ip;

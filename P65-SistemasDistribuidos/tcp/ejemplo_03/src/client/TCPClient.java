@@ -11,8 +11,8 @@ public class TCPClient {
 
     public static void main(String[] args) {
         try (Socket socket = new Socket(SERVER_ADDRESS, SERVER_PORT);
-             ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
-             ObjectInputStream in = new ObjectInputStream(socket.getInputStream())) {
+            ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
+            ObjectInputStream in = new ObjectInputStream(socket.getInputStream())) {
 
             // Enviar datos al servidor
             String data = "Hello from client 4!";

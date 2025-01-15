@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TCPClient",
+            "request": "launch",
+            "mainClass": "client.TCPClient",
+            "projectName": "adrianamoralesc4.github.io_812cf49b"
+        },
+        {
+            "type": "java",
+            "name": "TCPServer",
+            "request": "launch",
+            "mainClass": "server.TCPServer",
+            "projectName": "adrianamoralesc4.github.io_812cf49b"
+        },
+        {
+            "type": "java",
+            "name": "TCPClient",
+            "request": "launch",
+            "mainClass": "TCPClient",
+            "projectName": "adrianamoralesc4.github.io_812cf49b"
+        },
+        {
+            "type": "java",
+            "name": "TCPServer",
+            "request": "launch",
+            "mainClass": "TCPServer",
+            "projectName": "adrianamoralesc4.github.io_812cf49b"
+        },
+        {
+            "type": "java",
             "name": "Cliente",
             "request": "launch",
             "mainClass": "Cliente",
