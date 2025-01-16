@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  auth-service:
+    build: ./auth-service
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/authDB
+      - JWT_SECRET=mi_clave_secreta
+    depends_on:
+      - mongo
+
+  product-service:
+    build: ./product-service
+    ports:
+      - "3002:3002"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/productDB
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
