@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "app": "node index.js"
+  },
+  "author": "AMC",
+  "license": "GPL-3.0",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
