@@ -1,3 +1,4 @@
+ 
 services:
   mongo:
     image: mongo
@@ -7,8 +8,9 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=adrianamoralesc19
       - MONGO_INITDB_ROOT_PASSWORD=i77nAfZHKQf4J3Id
+
   auth-service:
-    build: 
+    build:
       context: ./auth-service
     container_name: auth-service
     ports:
@@ -19,11 +21,10 @@ services:
       - mongo
     env_file:
       - ./auth-service/.env
-
-  product-service:
-    build: 
-      context: ./product-service
-    container_name: product-service
+  products-service:
+    build:
+      context: ./products-service
+    container_name: products-service
     ports:
       - "3001:3000"
     environment:
@@ -31,6 +32,4 @@ services:
     depends_on:
       - mongo
     env_file:
-      - /product-service/.env
-
-  
+      - ./products-service/.env

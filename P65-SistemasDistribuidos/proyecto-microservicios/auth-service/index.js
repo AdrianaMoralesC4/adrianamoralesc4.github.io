@@ -1,58 +1,75 @@
-// Cargar las variables de entorno
-require('dotenv').config();
-
 // Requerir dependencias
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const jwt = require('jsonwebtoken');
-const User = require('./models/User'); // Modelo de Usuario
+const bcrypt = require('bcryptjs')
+const User = require('./models/User.js');
+
+dotenv.config();
 
 // Configurar Express
 const app = express();
 app.use(express.json());
 
-// Cargar variables de entorno
-const jwtSecret = process.env.JWT_SECRET;
-const mongoUri = process.env.MONGO_URI;
-
 // Conexión a MongoDB
-mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Conectado a MongoDB'))
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('Auth-service conectado a MongoDB'))
   .catch(err => console.error('Error de conexión a MongoDB:', err));
 
-// Middleware de autenticación
-function authenticate(req, res, next) {
-  const token = req.headers['authorization']?.split(' ')[1];
-  if (!token) return res.status(403).send('Token requerido');
+// Endpoint de register
+app.post('/user/register', async(req, res) =>{
+  try {
+    const {username, password} = req.body;
 
-  jwt.verify(token, jwtSecret, (err, decoded) => {
-    if (err) return res.status(401).send('Token inválido');
-    req.user = decoded;
-    next();
-  });
-}
+    if (!username || !password) {
+      return res.status(400).send({error: 'Username y contraseña son obligatorios.'});
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 7);
+
+    const newUser = new User({username, password: hashedPassword});
+    await newUser.save();
+
+    res.status(201).send({ message: 'Usuario registrado exitosamente.'});
+    
+  } catch (err) {
+   res.status(500).send({ error: 'Error al registrar el usario.'}, err); 
+  }
+});  
 
 // Endpoint de login
-app.post('/login', async (req, res) => {
+app.post('/user/login', async (req, res) => {
   const { username, password } = req.body;
   try {
     const user = await User.findOne({ username });
-    if (user && user.password === password) {
-      const token = jwt.sign({ id: user._id, username: user.username }, jwtSecret, { expiresIn: '1h' });
-      return res.status(200).json({ message: 'Login exitoso', token });
+    if (!user || !(await bcrypt.compare(password, user.password))) {
+      return res.status(401).send({ message: 'Credenciales invalidas.'});   
     }
-    res.status(401).send('Credenciales inválidas');
-  } catch (error) {
-    res.status(500).send('Error al procesar el login');
+
+    const token = jwt.sign({ id: user._id}, process.env.JWT_SECRET, { expiresIn: '1h' });
+    res.send({token});
+
+  } catch (err) {
+    res.status(500).send({ error: 'Error al procesar el login'}, err);
   }
 });
 
 // Endpoint protegido
-app.get('/protected', authenticate, (req, res) => {
-  res.status(200).send(`Bienvenido, ${req.user.username}`);
+app.get('/user/verify', (req, res) => {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer')) {
+    return res.status(401).send({ error: 'Token no obtendio.'});
+  }
+
+  const token = authHeader.split(' ')[1];
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    res.send({ valid: true, user: decoded });
+  } catch (err) {
+    res.status(401).send({ error: 'Token inválido.' });
+  }
 });
 
 // Iniciar el servidor
-app.listen(3001, () => {
-  console.log('Servicio de autenticación corriendo en el puerto 3001');
-});
+app.listen(3000, () => console.log('Servicio de autenticación ejecutando en http://localhost:3000'));
